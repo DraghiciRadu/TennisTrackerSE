@@ -1,8 +1,233 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Tennis Tracker - Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">First Azure Deployment something something</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container-fluid px-0 mb-5">
+    <!-- Added mb-5 to prevent footer overlap -->
+    <!-- Live Matches Section - Updated with centered score -->
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <div class="d-flex justify-content-between align-items-center">
+                <h4 class="mb-0"><i class="fas fa-tennis-ball me-2"></i>Live Matches</h4>
+                <a href="#" class="text-white">View All</a>
+            </div>
+        </div>
+        <div class="card-body p-0">
+            <div class="list-group list-group-flush">
+                <!-- ATP Wimbledon Match -->
+                <a href="#" class="list-group-item list-group-item-action">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex flex-column" style="width: 35%;">
+                            <span class="fw-bold">ATP Wimbledon</span>
+                            <small class="text-muted">Centre Court - Round of 16</small>
+                        </div>
+                        <div class="text-center position-relative" style="width: 30%;">
+                            <span class="badge bg-danger position-absolute top-0 start-50 translate-middle">LIVE</span>
+                            <div class="d-flex justify-content-center align-items-center mt-3">
+                                <span class="fw-bold fs-4 mx-2">2</span>
+                                <span class="mx-1">-</span>
+                                <span class="fw-bold fs-4 mx-2">1</span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end" style="width: 35%;">
+                            <div class="text-end me-3">
+                                <span class="d-block fw-bold">Djokovic N.</span>
+                                <small class="text-muted">(SRB)</small>
+                            </div>
+                            <div class="text-start">
+                                <span class="d-block fw-bold">Alcaraz C.</span>
+                                <small class="text-muted">(ESP)</small>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- WTA Roland Garros Match -->
+                <a href="#" class="list-group-item list-group-item-action">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex flex-column" style="width: 35%;">
+                            <span class="fw-bold">WTA Roland Garros</span>
+                            <small class="text-muted">Court Philippe-Chatrier - Quarterfinal</small>
+                        </div>
+                        <div class="text-center position-relative" style="width: 30%;">
+                            <span class="badge bg-danger position-absolute top-0 start-50 translate-middle">LIVE</span>
+                            <div class="d-flex justify-content-center align-items-center mt-3">
+                                <span class="fw-bold fs-4 mx-2">1</span>
+                                <span class="mx-1">-</span>
+                                <span class="fw-bold fs-4 mx-2">0</span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end" style="width: 35%;">
+                            <div class="text-end me-3">
+                                <span class="d-block fw-bold">Swiatek I.</span>
+                                <small class="text-muted">(POL)</small>
+                            </div>
+                            <div class="text-start">
+                                <span class="d-block fw-bold">Sabalenka A.</span>
+                                <small class="text-muted">(BLR)</small>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upcoming Matches Section -->
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <div class="d-flex justify-content-between align-items-center">
+                <h4 class="mb-0"><i class="far fa-calendar-alt me-2"></i>Upcoming Matches</h4>
+                <a href="#" class="text-white">View All</a>
+            </div>
+        </div>
+        <div class="card-body p-0">
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex flex-column">
+                            <span class="fw-bold">ATP US Open</span>
+                            <small class="text-muted">Arthur Ashe Stadium - Semifinal</small>
+                        </div>
+                        <div class="text-muted">
+                            <i class="far fa-clock me-1"></i> Today, 19:30
+                        </div>
+                        <div class="d-flex">
+                            <div class="text-end me-3">
+                                <span class="d-block fw-bold">Medvedev D.</span>
+                                <small class="text-muted">(RUS)</small>
+                            </div>
+                            <div class="text-start">
+                                <span class="d-block fw-bold">Sinner J.</span>
+                                <small class="text-muted">(ITA)</small>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Players Section -->
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0"><i class="fas fa-trophy me-2"></i>ATP Rankings</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Player</th>
+                                    <th>Points</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Novak Djokovic (SRB)</td>
+                                    <td>11,245</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Carlos Alcaraz (ESP)</td>
+                                    <td>8,855</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Jannik Sinner (ITA)</td>
+                                    <td>8,270</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <a href="#" class="btn btn-outline-primary btn-sm">View Full Rankings</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0"><i class="fas fa-trophy me-2"></i>WTA Rankings</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Player</th>
+                                    <th>Points</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Iga Swiatek (POL)</td>
+                                    <td>9,880</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Aryna Sabalenka (BLR)</td>
+                                    <td>8,695</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Coco Gauff (USA)</td>
+                                    <td>6,495</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <a href="#" class="btn btn-outline-primary btn-sm">View Full Rankings</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Current Tournaments Section - Fixed margin-bottom -->
+    <div class="card mb-5">
+        <!-- Increased margin-bottom to mb-5 -->
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0"><i class="fas fa-flag me-2"></i>Current Tournaments</h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x150?text=Wimbledon" class="card-img-top" alt="Wimbledon">
+                        <div class="card-body">
+                            <h5 class="card-title">Wimbledon</h5>
+                            <p class="card-text">The Championships, Wimbledon - Grass</p>
+                            <a href="#" class="btn btn-primary btn-sm">View Matches</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x150?text=Roland+Garros" class="card-img-top" alt="Roland Garros">
+                        <div class="card-body">
+                            <h5 class="card-title">Roland Garros</h5>
+                            <p class="card-text">French Open - Clay</p>
+                            <a href="#" class="btn btn-primary btn-sm">View Matches</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x150?text=US+Open" class="card-img-top" alt="US Open">
+                        <div class="card-body">
+                            <h5 class="card-title">US Open</h5>
+                            <p class="card-text">US Open - Hard</p>
+                            <a href="#" class="btn btn-primary btn-sm">View Matches</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
