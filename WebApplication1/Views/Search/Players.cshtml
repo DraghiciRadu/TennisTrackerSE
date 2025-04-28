@@ -1,6 +1,258 @@
-﻿namespace WebApplication1.Views.Search
-{
-    public class Players
-    {
-    }
+﻿@{
+    ViewData["Title"] = "Players - Tennis Tracker";
 }
+
+<div class="container-fluid px-0">
+    <!-- Players Filter Section -->
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0"><i class="fas fa-filter me-2"></i>Filter Players</h4>
+        </div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">Gender</label>
+                    <select class="form-select">
+                        <option selected>All Players</option>
+                        <option>ATP (Men)</option>
+                        <option>WTA (Women)</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Country</label>
+                    <select class="form-select">
+                        <option selected>All Countries</option>
+                        <option>Serbia</option>
+                        <option>Spain</option>
+                        <option>Poland</option>
+                        <option>USA</option>
+                    </select>
+                </div>
+                <div class="col-md-4 d-flex align-items-end">
+                    <button class="btn btn-primary w-100">
+                        <i class="fas fa-search me-2"></i>Apply Filters
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Players Section -->
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <div class="d-flex justify-content-between align-items-center">
+                <h4 class="mb-0"><i class="fas fa-trophy me-2"></i>Top Ranked Players</h4>
+                <a href="#" class="text-white">View All Rankings</a>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Country</th>
+                            <th>Age</th>
+                            <th>Points</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- ATP Players -->
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://via.placeholder.com/40?text=ND" class="rounded-circle me-3" alt="Novak Djokovic">
+                                    <div>
+                                        <div class="fw-bold">Novak Djokovic</div>
+                                        <small class="text-muted">ATP #1</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="badge bg-light text-dark">
+                                    <i class="fas fa-flag me-1"></i> SRB
+                                </span>
+                            </td>
+                            <td>36</td>
+                            <td>11,245</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://via.placeholder.com/40?text=CA" class="rounded-circle me-3" alt="Carlos Alcaraz">
+                                    <div>
+                                        <div class="fw-bold">Carlos Alcaraz</div>
+                                        <small class="text-muted">ATP #2</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="badge bg-light text-dark">
+                                    <i class="fas fa-flag me-1"></i> ESP
+                                </span>
+                            </td>
+                            <td>20</td>
+                            <td>8,855</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </td>
+                        </tr>
+
+                        <!-- WTA Players -->
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://via.placeholder.com/40?text=IS" class="rounded-circle me-3" alt="Iga Swiatek">
+                                    <div>
+                                        <div class="fw-bold">Iga Świątek</div>
+                                        <small class="text-muted">WTA #1</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="badge bg-light text-dark">
+                                    <i class="fas fa-flag me-1"></i> POL
+                                </span>
+                            </td>
+                            <td>22</td>
+                            <td>9,880</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://via.placeholder.com/40?text=AS" class="rounded-circle me-3" alt="Aryna Sabalenka">
+                                    <div>
+                                        <div class="fw-bold">Aryna Sabalenka</div>
+                                        <small class="text-muted">WTA #2</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="badge bg-light text-dark">
+                                    <i class="fas fa-flag me-1"></i> BLR
+                                </span>
+                            </td>
+                            <td>25</td>
+                            <td>8,695</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Player Search Section -->
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0"><i class="fas fa-search me-2"></i>Find Players</h4>
+        </div>
+        <div class="card-body">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search players by name..." aria-label="Player search">
+                <button class="btn btn-primary" type="button">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Sample Player Card 1 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-header bg-light">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">ATP #3</span>
+                                <span class="badge bg-light text-dark">
+                                    <i class="fas fa-flag me-1"></i> ITA
+                                </span>
+                            </div>
+                        </div>
+                        <img src="https://via.placeholder.com/300x200?text=Jannik+Sinner" class="card-img-top" alt="Jannik Sinner">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Jannik Sinner</h5>
+                            <p class="card-text">
+                                <small class="text-muted">Age: 22</small><br>
+                                <strong>8,270 points</strong>
+                            </p>
+                            <a href="#" class="btn btn-primary btn-sm">
+                                <i class="fas fa-user me-1"></i> View Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Player Card 2 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-header bg-light">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-danger">WTA #3</span>
+                                <span class="badge bg-light text-dark">
+                                    <i class="fas fa-flag me-1"></i> USA
+                                </span>
+                            </div>
+                        </div>
+                        <img src="https://via.placeholder.com/300x200?text=Coco+Gauff" class="card-img-top" alt="Coco Gauff">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Coco Gauff</h5>
+                            <p class="card-text">
+                                <small class="text-muted">Age: 19</small><br>
+                                <strong>6,495 points</strong>
+                            </p>
+                            <a href="#" class="btn btn-primary btn-sm">
+                                <i class="fas fa-user me-1"></i> View Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Player Card 3 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-header bg-light">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">ATP #4</span>
+                                <span class="badge bg-light text-dark">
+                                    <i class="fas fa-flag me-1"></i> RUS
+                                </span>
+                            </div>
+                        </div>
+                        <img src="https://via.placeholder.com/300x200?text=Daniil+Medvedev" class="card-img-top" alt="Daniil Medvedev">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Daniil Medvedev</h5>
+                            <p class="card-text">
+                                <small class="text-muted">Age: 27</small><br>
+                                <strong>7,555 points</strong>
+                            </p>
+                            <a href="#" class="btn btn-primary btn-sm">
+                                <i class="fas fa-user me-1"></i> View Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -8,5 +8,13 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
+        public IActionResult Matches()
+        {
+            return View();
+        }
+        public IActionResult Players()
+        {
+            return View();
+        }
     }
 }
