@@ -1,6 +1,52 @@
-﻿namespace WebApplication1.Views.Account
-{
-    public class Login
-    {
-    }
+﻿@model WebApplication1.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
 }
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card shadow-lg rounded-4">
+                <div class="card-body p-4">
+                    <h2 class="text-center mb-4">Welcome Back</h2>
+
+                    <form asp-action="Login" method="post">
+                        @Html.AntiForgeryToken()
+                        <partial name="_ValidationScriptsPartial" />
+                        <validation-summary class="text-danger" asp-validation-summary="All"></validation-summary>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+                                <input type="email" name="email" class="form-control" placeholder="you@example.com" required />
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                                <input type="password" name="password" class="form-control" placeholder="••••••••" required />
+                            </div>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="bi bi-box-arrow-in-right"></i> Login
+                        </button>
+
+                        <div class="text-center mt-3">
+                            <a href="/Account/ForgotPassword">Forgot your password?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
