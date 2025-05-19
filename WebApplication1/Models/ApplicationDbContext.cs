@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using WebApplication1.Models;
 
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 {
@@ -9,4 +10,6 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     }
 
     // Add DbSet<> for other models
+    public DbSet<Match> Matches { get; set; }
+
 }
